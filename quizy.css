@@ -1,0 +1,13 @@
+h2 {
+    width: 350px;
+    border-bottom: solid 3px #FFFF00;
+}
+
+li {
+    display: block;
+    border: 1px solid #ebebeb;
+    padding: 13px;
+    margin: 10px 0;
+    font-weight: 600;
+    cursor: pointer;
+}
