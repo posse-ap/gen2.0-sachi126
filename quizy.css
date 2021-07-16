@@ -1,6 +1,24 @@
+h1{
+    font-size: 19px;
+    line-height: 27px;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: #161616
+}
 h2 {
-    width: 350px;
-    border-bottom: solid 3px #FFFF00;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 600;
+    display: inline-block
+}
+
+h2:after {
+    display: block;
+    margin-top: 10px;
+    width: 120px;
+    height: 2px;
+    background-color: #00ab36;
+    content: '';
 }
 
 li {
@@ -10,4 +28,6 @@ li {
     margin: 10px 0;
     font-weight: 600;
     cursor: pointer;
+    box-shadow:  0 3px 2px -2px rgb(0 0 0 / 13%);
 }
+
