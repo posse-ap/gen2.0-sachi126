@@ -6,117 +6,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ガチで東京の人しか解けない！ #東京の難読地名クイズ</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="quizy.css">
 </head>
 
 <body>
-    <!-- <div class="containerWrapper"> -->
-        <!-- <div class="containerContentWrapper"> -->
+    <script src="quizy.js"></script>
 
-            <h1 class="quizTitle">ガチで東京の人しか解けない！ #東京の難読地名クイズ</h1>
-            <br>
-            <!-- <section class="quiz boxContainer"> -->
-            
-            <div id="quizAsk"></div>
-                <!-- <h2>1. この地名はなんて読む？</h2> -->
-            
-                <!-- <img class="quizImage"
-                    src="https://d1khcm40x1j0f.cloudfront.net/quiz/34d20397a2a506fe2c1ee636dc011a07.png" alt="高輪の画像"> -->
-            
-                    <!-- <ul>
-                    <li id="failedChange" class="failed">こうわ</li>
-                    <li id="succeededChange" class="succeeded">たかなわ</li>
-                    <li id="failedChange" class="failed">たかわ</li>
-                    </ul> -->
-                    
-                    <!-- <div class="quizResult"> -->
-                        <!-- <p class="quizResultTitle quizResultTitleSucceeded">正解！</p>
-                        <p class="quizResultContent">正解は「たかなわ」です！</p> -->
-                    <!-- </div> -->
-                    
-            <!-- </section> -->
-                    
-                    
-
-
-
-
-
-                    <!-- <h2>2. この地名はなんて読む？</h2>
-                    <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/512b8146e7661821c45dbb8fefedf731.png" alt="亀戸の画像">
-                    <ul>
-                        <li>かめと</li>
-                        <li>かめいど</li>
-                <li>かめど</li>
+        <!-- <section class="quiz boxContainer">
+            <h2 class="question">1. この地名はなんて読む？</h2>
+            <div class="quizImageContainer">
+                <img class="image" src="https://d1khcm40x1j0f.cloudfront.net/quiz/34d20397a2a506fe2c1ee636dc011a07.png"
+                    alt="高輪の画像">
+            </div>
+            <ul> -->
+                <li id="0-1-0" class="list">こうわ</li>
+                <li id="0-0-1" class="list">たかなわ</li>
+                <li id="0-0-2" class="list">たかわ</li>
             </ul>
+        </section>
+    </div>
 
-            <h2>3. この地名はなんて読む？</h2>
-            <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/ad4f8badd896f1a9b527c530ebf8ac7f.png" alt="麹町の画像">
-            <ul>
-                <li>かゆまち</li>
-                <li>こうじまち</li>
-                <li>おかとまち</li>
-            </ul>
+    
+    <!-- <h2>2. この地名はなんて読む？</h2>
+    <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/512b8146e7661821c45dbb8fefedf731.png" alt="亀戸の画像">
+    <ul>
+        <li>かめと</li>
+        <li>かめいど</li>
+        <li>かめど</li>
+    </ul>
 
-            <h2>4. この地名はなんて読む？</h2>
-            <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/ee645c9f43be1ab3992d121ee9e780fb.png" alt="御成門">
-            <ul>
-                <li>おかどもん</li>
-                <li>ごせいもん</li>
-                <li>おなりもん</li>
-            </ul>
+    <h2>3. この地名はなんて読む？</h2>
+    <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/ad4f8badd896f1a9b527c530ebf8ac7f.png" alt="麹町の画像">
+    <ul>
+        <li>かゆまち</li>
+        <li>こうじまち</li>
+        <li>おかとまち</li>
+    </ul>
 
-            <h2>5. この地名はなんて読む？</h2>
-            <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/6a235aaa10f0bd3ca57871f76907797b.png" alt="等々力の画像">
-            <ul>
-                <li>とどろき</li>
-                <li>たたら</li>
-                <li>たたりき</li>
-            </ul>
+    <h2>4. この地名はなんて読む？</h2>
+    <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/ee645c9f43be1ab3992d121ee9e780fb.png" alt="御成門">
+    <ul>
+        <li>おかどもん</li>
+        <li>ごせいもん</li>
+        <li>おなりもん</li>
+    </ul>
 
-            <h2>6. この地名はなんて読む？</h2>
-            <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/0b6789cf496fb75191edf1e3a6e05039.png" alt="石神井の画像">
-            <ul>
-                <li>いじい</li>
-                <li>しゃくじい</li>
-                <li>せきこうい</li>
-            </ul>
+    <h2>5. この地名はなんて読む？</h2>
+    <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/6a235aaa10f0bd3ca57871f76907797b.png" alt="等々力の画像">
+    <ul>
+        <li>とどろき</li>
+        <li>たたら</li>
+        <li>たたりき</li>
+    </ul>
 
-            <h2>7. この地名はなんて読む？</h2>
-            <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/23e698eec548ff20a4f7969ca8823c53.png" alt="雑色の画像">
-            <ul>
-                <li>ぞうしき</li>
-                <li>ざっしき</li>
-                <li>ざっしょく</li>
-            </ul>
+    <h2>6. この地名はなんて読む？</h2>
+    <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/0b6789cf496fb75191edf1e3a6e05039.png" alt="石神井の画像">
+    <ul>
+        <li>いじい</li>
+        <li>しゃくじい</li>
+        <li>せきこうい</li>
+    </ul>
 
-            <h2>8. この地名はなんて読む？</h2>
-            <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/50a753d151d35f8602d2c3e2790ea6e4.png" alt="御徒町の画像">
-            <ul>
-                <li>おかとまち</li>
-                <li>みとちょう</li>
-                <li>ごしろちょう</li>
-            </ul>
+    <h2>7. この地名はなんて読む？</h2>
+    <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/23e698eec548ff20a4f7969ca8823c53.png" alt="雑色の画像">
+    <ul>
+        <li>ぞうしき</li>
+        <li>ざっしき</li>
+        <li>ざっしょく</li>
+    </ul>
 
-            <h2>9. この地名はなんて読む？</h2>
-            <img src="https://d1khcm40x1j0f.cloudfront.net/words/8cad76c39c43e2b651041c6d812ea26e.png" alt="鹿骨の画像">
-            <ul>
-                <li>ししぼね</li>
-                <li>しこね</li>
-                <li>ろっこつ</li>
-            </ul>
+    <h2>8. この地名はなんて読む？</h2>
+    <img src="https://d1khcm40x1j0f.cloudfront.net/quiz/50a753d151d35f8602d2c3e2790ea6e4.png" alt="御徒町の画像">
+    <ul>
+        <li>おかとまち</li>
+        <li>みとちょう</li>
+        <li>ごしろちょう</li>
+    </ul>
 
-            <h2>10. この地名はなんて読む？</h2>
-            <img src="https://d1khcm40x1j0f.cloudfront.net/words/34508ddb0789ee73471b9f17977e7c9c.png" alt="小榑の画像">
-            <ul>
-                <li>こしゃく</li>
-                <li>こばく</li>
-                <li>こぐれ</li>
-            </ul> -->
+    <h2>9. この地名はなんて読む？</h2>
+    <img src="https://d1khcm40x1j0f.cloudfront.net/words/8cad76c39c43e2b651041c6d812ea26e.png" alt="鹿骨の画像">
+    <ul>
+        <li>ししぼね</li>
+        <li>しこね</li>
+        <li>ろっこつ</li>
+    </ul>
 
-            <script src="quizy.js"></script>
-        <!-- </div>
-    </div> -->
+    <h2>10. この地名はなんて読む？</h2>
+    <img src="https://d1khcm40x1j0f.cloudfront.net/words/34508ddb0789ee73471b9f17977e7c9c.png" alt="小榑の画像">
+    <ul>
+        <li>こしゃく</li>
+        <li>こばく</li>
+        <li>こぐれ</li>
+    </ul>
+
+    <script src="quizy.js"></script>
 </body>
 
-</html> 
+</html> -->
