@@ -1,0 +1,126 @@
+.quizTitle {
+    font-size: 19px;
+    line-height: 27px;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: #161616
+}
+
+body {
+    display: block;
+    margin: 8px;
+}
+
+.main {
+    margin: 0 auto;
+    width: 570px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+.boxContainer {
+    width: auto;
+    margin: 15px;
+}
+
+.quiz {
+    margin-top: 20px;
+}
+
+.quiz h1 {
+    font-size: 17px;
+    display: inline;
+    background: linear-gradient(transparent 70%, #f7ff4e 0);
+}
+
+.quiz img {
+    width: 100%;
+    margin: 0 auto 0;
+}
+
+.quiz ul {
+    list-style: none;
+    margin: 10px 0;
+    padding: 13px 0;
+}
+.quiz li {
+    font-weight: 600;
+    padding: 0.1em 0.5em;
+    border: solid 1px #d3d3d3;
+    box-shadow: 0 2px 6px rgba(100, 100, 100, 0.2);
+    margin-bottom: 6px;
+    height: 39px;
+    padding-left: 13px;
+    padding-top: 13px;
+}
+
+.quizImageContainer{
+    margin: 10px 0px;
+    display: block;
+}
+
+.question {
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 600;
+    display: inline-block
+}
+
+.question:after {
+    display: block;
+    margin-top: 10px;
+    width: 120px;
+    height: 2px;
+    background-color: #00ab36;
+    content: '';
+}
+
+.list {
+    display: block;
+    border: 1px solid #ebebeb;
+    padding: 13px;
+    margin: 10px 0;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow:  0 3px 2px -2px rgb(0 0 0 / 13%);
+    width: 100%;
+}
+
+.answerset {
+    cursor: pointer;
+  }
+
+.succeeded {
+    background: rgb(40, 125, 255);
+    color: rgb(255, 255, 255);
+}
+
+.failed {
+    background: rgb(255, 81, 40);
+    color: rgb(255, 255, 255);
+}
+
+.resultbox {
+    display: none;
+    height: 77px;
+    line-height: 30px;
+}
+
+.resultbox_succeeded {
+    background: linear-gradient(transparent 70%, #08b3f0 0);
+}
+
+.resultbox_failed {
+    background: linear-gradient(transparent 70%, #fd6647 0);
+}
+
+.quiz img {
+    width: 100%;
+    margin: 0 auto 0;
+}
+
+.contentWrapper {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+}
