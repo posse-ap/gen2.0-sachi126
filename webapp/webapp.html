@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSSE WebApp</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="webapp.css">
+</head>
+
+
+
+
+
+
+
+<!-- ここからファーストビュー -->
+<body class="webapp_wrapper">
+    <header class="header">
+        <div class="header_inner">
+            <button class="header_button" id="header_button">
+                <span class="header_button_text">記録・投稿</span>
+            </button>
+            <div class="header_top">
+                <div class="header_logo">
+                    <img src="https://posse.anti-pattern.co.jp/img/posseLogo.png" alt="" class="header_logo_img">
+                </div>
+                <div class="header_week" id="aa">4th week</div>
+                </div>
+            </div>
+        </div>
+
+
+        
+    </header>
+            
+<div class="main_wrapper">
+    <div class="study_hour_wrapper">
+        <ul class="study_hour_ul">
+            <li class="study_hour_li">
+                <span>Today</span>
+                <time>3</time>
+                <hour>hour</hour>
+            </li>
+            <li class="study_hour_li">
+                <span>Month</span>
+                <time>120</time>
+                <hour>hour</span>
+            </li>
+            <li class="study_hour_li">
+                <span>Total</span>
+                <time>1348</time>
+                <hour>hour</hour>
+            </li>
+        </ul>
+        <div class="bar_graph_wrapper">
+            <canvas class="bar_graph_style" id="bar-chart" height="215"></canvas>
+        </div>
+    </div>
+    <div class="pie_chart_wrapper">
+        <ul class="pie_chart_ul">
+            <li class="pie_chart_li">
+                <span> 学習言語</span>
+                <div id=pieChart1 class="pieChart1"></div>
+                <ul class="pie_chart_contents_ul">
+                    <li class="pie_chart_contents_li">
+                        <i class="bullet bullet_circle bullet1"></i><span>JavaScript</span>
+                        <i class="bullet bullet_circle bullet2"></i><span>CSS</span>
+                        <i class="bullet bullet_circle bullet3"></i><span>PHP</span>
+                    </li>
+                    <li class="pie_chart_contents_li">
+                        <i class="bullet bullet_circle bullet4"></i><span>HTML</span>
+                        <i class="bullet bullet_circle bullet5"></i><span>Laravel</span>
+                        <i class="bullet bullet_circle bullet6"></i><span>SQL</span>
+                    </li>
+                    <li class="pie_chart_contents_li">
+                        <i class="bullet bullet_circle bullet7"></i><span>SHELL</span>
+                    </li>
+                    <li class="pie_chart_contents_li">
+                        <i class="bullet bullet_circle bullet8"></i><span>情報システム基礎知識(その他)</span>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li class="pie_chart_li">
+                <span>学習コンテンツ</span>
+                <div id="pieChart2" class="pieChart2"></div>
+                <ul class="pie_chart_contents_ul">
+                    <li class="pie_chart_contents_li"><i class="bullet bullet_circle bullet1"></i><span>ドットインストール</span></li>
+                    <li class="pie_chart_contents_li"><i class="bullet bullet_circle bullet2"></i><span>N予備校</span></li>
+                    <li class="pie_chart_contents_li"><i class="bullet bullet_circle bullet3"></i><span>POSSE課題</span></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- ここからモーダル -->
+<div id="modal-content" class="modal_content"></div>
+
+
+<script src="webapp.js"></script>
+</body>
+
+</html>

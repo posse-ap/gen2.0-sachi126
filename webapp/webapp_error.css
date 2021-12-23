@@ -1,0 +1,26 @@
+.webapp_wrapper {
+    background-color: #EEEEEE;
+}
+
+.header {
+    position: fixed;
+    height: 80px;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+.header_inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.header_logo {
+    
+}
