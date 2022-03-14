@@ -1,0 +1,944 @@
+body {/* 全体の背景色をグレーにする */
+    background: #F5F5F8;
+    position: relative;
+    z-index: 10;
+}
+.body_wrapper {/* 端に余白 */
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 0 5rem;
+}
+
+/* ここからヘッダー */
+
+.header {
+    height: 15%;
+    background: #ffffff;
+    box-shadow: 2px 2px 10px rgb(214, 214, 214);
+}
+.header_inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.header_left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.header_logo {
+    width: 30%;
+    height: auto;
+    padding: 1.5rem 1rem 1.5rem 3rem;
+}
+.header_logo_img {
+    width: 100%;
+}
+.header_text {
+    color: #728e97;
+    font-size: 14px;
+    font-weight: 400;
+}
+.header_button {
+    position: absolute;
+    top: 1rem;
+    left: 70rem;
+    border: none;
+    background: linear-gradient(#1378C0, #3CCCFC);
+    box-shadow: 3px 5px 3px rgb(182, 229, 229);
+    border-radius: 30px;
+    padding: 8px 50px 5px;
+}
+.header_button_text {
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #f9f4f2;
+}
+
+/*  棒グラフ側・円グラフ側に分けて、それぞれの配置指定*/
+
+.bar_graph_page {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.pie_chart_page {
+    width: 50%;
+}
+
+/* TODAY,MONTH,TOTAlのボックス */
+
+.learning_time_ul {/* 3つのボックスを横並び */
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.learning_time_li {/* ボックスの中身を縦並び */
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    margin-right: 20px;
+    padding: 1rem 0;
+    background: #ffffff;
+    border-radius: 1rem;
+    text-align: center;
+    line-height: 2.5rem;
+    box-shadow: 2px 2px 10px rgb(214, 214, 214);
+}
+
+.learning_time_li>span {/* TODAY,MONTH,TOTAl文字のスタイル */
+    color: #1272BB;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.learning_time_li>time {/* */
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.learning_time_li>hour {
+    color: #9DBCD3;
+}
+
+/* ここから棒グラフ */
+
+.bar_graph_wrapper {
+    width: 97%;
+    height: auto;
+}
+
+.bar_graph_style {
+    border-radius: 1rem;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 2px 2px 10px rgb(214, 214, 214);
+}
+
+/* ここから円グラフ */
+
+.donutChart1 {
+    width: 300px;
+    height: 300px;
+}
+
+.donutChart2 {
+    width: 300px;
+    height: 300px;
+}
+
+.pie_chart_ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.pie_chart_li {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 1rem;
+    line-height: 2rem;
+    padding: 1rem;
+    margin: 20px 20px 20px 0;
+    box-shadow: 2px 2px 10px rgb(214, 214, 214);
+}
+
+.pie_chart_li>span {
+    font: 18px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.pie_chart_img {
+    width: 100%;
+    height: 25rem;
+}
+
+.pie_chart_component_ul {
+    list-style: none;
+    margin-top: 3rem;
+}
+
+.pie_chart_component_li {
+    font-size: 14px;
+    line-height: 2rem;
+}
+
+.fas {
+    margin-right: 0.5rem;
+}
+
+.fas1 {
+    color: #1855EF;
+}
+
+.fas2 {
+    color: #1170BC;
+}
+
+.fas3 {
+    color: #20BDDE;
+}
+
+.fas4 {
+    color: #3CCEFE;
+}
+
+.fas5 {
+    color: #B39EF3;
+}
+
+.fas6 {
+    color: #6C47EB;
+}
+
+.fas7 {
+    color: #6C47EB;
+}
+
+.fas8 {
+    color: #3004C0;
+}
+
+/* 
+
+ここからもーだる 
+
+*/
+
+.overlay {
+    display: none;
+    background: #ffffff;
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    padding: 1rem 56px 2rem;
+    border-radius: 2rem;
+    z-index: 30;
+}
+
+.overlay_wrapper {
+    display: flex;
+}
+
+.left_wrapper {
+    margin-right: 40px;
+    margin-top: 1.1rem;
+}
+
+.right_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.fa-check-circle {
+    color: rgb(178, 177, 177);
+}
+
+.fa-check-circle_clicked {
+    color: #1170BC;
+}
+
+.learning_date {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.learning_date>input {
+    border: none;
+    border-radius: 1rem;
+    width: 25rem;
+    height: 4rem;
+    background: #F5F5F8;
+}
+
+.learning_content {
+    margin-bottom: 1rem;
+}
+
+.learning_hour {
+    margin-bottom: 1rem;
+}
+
+.overlay_post_record_button {
+    border: none;
+    background: linear-gradient(#1378C0, #3CCCFC);
+    box-shadow: 3px 5px 3px rgb(182, 229, 229);
+    border-radius: 30px;
+    padding: 0.7rem 10rem 0.7rem;
+    margin: 0 0 0 30%;
+}
+
+.overlay_post_record_button_text {
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #f9f4f2;
+}
+
+.learning_hour {
+    display: flex;
+    flex-direction: column;
+}
+
+.learning_hour>input {
+    border: none;
+    border-radius: 1rem;
+    width: 25rem;
+    height: 5rem;
+    background: #F5F5F8;
+}
+
+.twitter_comment {
+    display: flex;
+    flex-direction: column;
+}
+
+.twitter_comment>input {
+    border: none;
+    border-radius: 1rem;
+    width: 25rem;
+    height: 10rem;
+    background: #F5F5F8;
+}
+
+.overlay_each_tittle {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.overlay_leaning_contents_wrapper {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.overlay_input {
+    border: 2px solid #1855EF;
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    display: none;
+    /* チェックボックスを非表示にする */
+}
+
+input[type="checkbox"]:checked+label {
+    background: #E7F5FF;
+    /* マウス選択時の背景色を指定する */
+}
+
+.overlay_input_element {
+    background: rgb(237, 234, 234);
+    padding: 0.5rem;
+    border-radius: 2rem;
+    margin: 0 0.5rem 1rem 0;
+}
+
+.overlay_input_horizontal {
+    display: flex;
+}
+
+.share_twitter {
+    margin-top: 1rem;
+}
+
+.fa-times {
+    padding-left: 25rem;
+}
+
+.show {
+    opacity: 1;
+}
+
+.black_filter {
+    display: none;
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-color: rgba(151, 151, 151, 0.5);
+    background-size: cover;
+}
+
+/* 
+ここからカレンダー 
+*/
+
+.calendar_modal {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 2rem;
+}
+
+.calendar_wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    color: black;
+    padding: 5rem 18.5em ;
+}
+
+#calendar_header {
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    margin: 1rem 0 1rem;
+}
+
+
+
+#calendar {
+    text-align: center;
+    width: 100%;
+}
+
+table {
+    outline: 0px solid rgba(0, 0, 0, 0);
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    color: #000;
+    font-weight: 500;
+    color: #AFC4D4;
+}
+
+th, td {
+    outline: 0px solid rgba(0, 0, 0, 0);
+    padding: 0.6rem 0.6rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+
+
+/*日曜日*/
+
+/* td:first-child { */
+    /* color: red; */
+/* } */
+
+/*土曜日*/
+
+/* td:last-child { */
+    /* color: blue; */
+/* } */
+
+/*前後月の日付*/
+
+td.disabled {
+    color: #ccc;
+}
+td.invisible {
+    opacity: 0;
+}
+
+/*本日*/
+
+td.today {
+    background-color: #1378C0;
+    color: #fff;
+    border-radius: 50%;
+}
+
+/*ボタン*/
+
+.calendar_next_prev_button {
+    position: absolute;
+    top: 4.5em;
+    left: 30%;
+    color: royalblue;
+    
+}
+
+.prev_button {
+    cursor: pointer;
+    color: #1376BE;
+    padding: 0.5rem 2rem;
+    margin: 1rem 15rem 0 0;
+    background: none;
+    border: none;
+    font-weight: bold;
+}
+.next_button {
+    cursor: pointer;
+    color: #9EBCD0;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0;
+    background: none;
+    border: none;
+    font-weight: bold;
+}
+
+
+
+#prev {
+    float: left;
+}
+
+#next {
+    float: right;
+}
+.determination_button {
+    border: none;
+    background: linear-gradient(#1378C0, #3CCCFC);
+    box-shadow: 3px 5px 3px rgb(182, 229, 229);
+    border-radius: 30px;
+    padding: 1rem 5rem; 
+    margin: 2rem 0 2rem 30%;
+}
+.determination_button_text {
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #f9f4f2;
+}
+
+.overlay_post_record_button a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* 
+
+ここからローディング画面
+
+*/
+
+.loading_wrapper {
+    display: none;
+    z-index: 30;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: #ffffff;
+    border-radius: 2rem;
+    padding: 12rem 25rem;
+}
+
+.loader {
+    font-size: 10px;
+    margin: 50px auto;
+    text-indent: -9999em;
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+    background: #3CCCFC;
+    background: -moz-linear-gradient(left, #3CCCFC 10%, rgba(255, 255, 255, 0) 42%);
+    background: -webkit-linear-gradient(left, #3CCCFC 10%, rgba(255, 255, 255, 0) 42%);
+    background: -o-linear-gradient(left, #3CCCFC 10%, rgba(255, 255, 255, 0) 42%);
+    background: -ms-linear-gradient(left, #3CCCFC 10%, rgba(255, 255, 255, 0) 42%);
+    background: linear-gradient(to right, #3CCCFC 10%, rgba(255, 255, 255, 0) 42%);
+    -webkit-animation: load3 1.4s infinite linear;
+    animation: load3 1.4s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 10;
+}
+
+.loader:before {
+    width: 50%;
+    height: 50%;
+    background: linear-gradient(#1378C0, #3CCCFC);
+    border-radius: 100% 0 0 0;
+    /*一辺だけを丸くして半円にしてる*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+}
+
+.loader:after {
+    /*中心を白で塗ってドーナツにしてる*/
+    background: #ffffff;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@-webkit-keyframes load3 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load3 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.loading_close_button {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+/* 
+  ここから完了画面
+   */
+
+.post_record_completed_whole_wrapper {
+    display: none;
+}
+
+.post_record_completed {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 50;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: #ffffff;
+    border-radius: 2rem;
+    padding: 14rem 26rem;
+}
+
+.post_record_completed_wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.post_record_completed_close_button {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.awesome {
+    color: #BDE360;
+}
+
+.awesome_check {
+    color: #BDE360;
+    padding: 1rem 0;
+}
+.year_month_change_part {
+    position: absolute;
+    top: 99%;
+    left: 45%;
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+ 
+}
+.year_month_displayed {
+    padding: 0 2rem;
+}
+.fa-chevron-left {
+    color: #1272BB;
+}
+.fa-chevron-right {
+    color: #9DBCD3;
+}
+
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+}
+
+@media screen and (max-width: 480px) {
+    /* 480px以下に適用されるCSS（スマホ用） */
+    .body {
+        width: 100vh;
+        height: 100vh;
+    }
+    .black_filter {
+        width: 100vh;
+        height: 100%;
+    }
+    .header {
+        height: 20vh;
+        width: 100vh;
+        background: #ffffff;
+        
+    }
+    .header_logo {
+        width: 20rem;
+        height: auto;
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+        
+    }
+    .header_text {
+        font-size: 2rem;
+        padding-top: 1.5rem;
+    }
+    .header_button {
+        position: absolute;
+        left: 15%;
+        top: 180%;
+        width: 80vh;
+        height: 13vh;
+        border-radius: 50px;
+        padding: auto;
+    }
+    .header_button_text {
+        font-size: 2.5rem;
+    }
+    .body_wrapper {
+        width: auto;
+        height: auto;
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* justify-content: center; */
+        margin: 0;
+    }
+    .bar_graph_page {
+        display: block;
+    }
+    .learning_time_ul {
+        display: flex;
+        justify-content: flex-start;
+        list-style: none;
+        margin: 3rem 0 3rem 2rem;
+        width: 90vh;
+        color :#0056c0  
+    }
+    .learning_time_ul::after {
+        content: "";
+        display: block;
+        width: 90vh;
+        height: 2px;
+        background: #E4EAEF;
+        position: absolute;
+        top: 42.5%;
+    }
+    .learning_time_li {
+        width: 120%;
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        padding: 1rem 4rem;
+        background: #ffffff;
+        border-radius: 1rem;
+        text-align: center;
+        line-height: 2.5rem;
+    }
+    
+    .bar_graph_wrapper {
+        width: 90vh;
+        background: #ffffff;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+    }
+    .chartjs-size-monitor {
+        width: 100%;
+        height: auto;
+    }
+
+    .learning_time_li>span {
+        color: #1272BB;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .learning_time_li>time {
+        font-size: 35px;
+        font-weight: bold;
+    }
+    .learning_time_li>hour {
+         color: #9DBCD3;
+    }
+    .pie_chart_page {
+        width: 100%;
+    }
+    .pie_chart_ul {
+        display: flex;
+        flex-direction: row-reverse;
+        position: absolute;
+        top: 99%;
+        left: 100%;
+        width: 100%;
+        margin-left: 5vh;
+    }
+    .pie_chart_li {
+        font-size: 1.7rem;
+        margin-right: 5vh;
+    }
+    .pie_chart_img {
+        width: 92%;
+        height: 20rem;
+        position: absolute;
+        
+    }
+    .pie_chart_component_ul {
+        list-style: none;
+        margin-top: 10px;
+    }
+    .pie_chart_component_li {
+        font-size: 1.3rem;
+    }
+    .year_month_change_part {
+        position: absolute;
+        top: 170%;
+        left: 70%;
+        width: 100%;
+    }
+    .year_month_displayed {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .overlay {
+        top: 15%;
+        left: 0;
+        width: 100vh;
+    }
+    .overlay_wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10vh;
+    }
+    .overlay_each_tittle {
+        font-size: 2rem;
+       
+    }
+    .learning_content {
+        margin-top: 2rem;
+    }
+    .overlay_input_element {
+        font-size: 2rem;
+    }
+    .fa-times {
+        position: absolute;
+        top: 2rem;
+        left: 40vh;
+        font-size: 4rem;
+    }
+    .learning_date>input {
+        width: 85vh; 
+        height: 7rem;
+        font-size: 2rem;
+    }
+    .learning_hour>input {
+        width: 85vh; 
+        height: 7rem;
+        font-size: 2rem;
+    }
+    .twitter_comment>input {
+        width: 85vh;
+        font-size: 2rem;
+        
+    }
+    .share_twitter>span {
+        font-size: 2rem;
+
+    }
+    .overlay_post_record_button {
+        left: 0;
+        width: 90vh;
+        height: 15vh;
+        margin: 3rem 0 1rem 0;
+        border-radius: 60px;
+    }
+    .overlay_post_record_button_text {
+        font-size: 3rem;
+    }
+    .post_record_completed {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        display: block;
+    }
+    .post_record_completed_wrapper {
+        margin-top: 60vh;
+    }
+    .post_record_completed_wrapper>span {
+        font-size: 3rem;
+        width: 100%; 
+        height: auto;
+        line-height: 5rem;
+        margin-top: 1rem;
+    }
+    .awesome_check {
+        font-size: 10rem;
+    }
+    .calendar_modal {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    .calendar_wrapper {
+        margin-top: 20vh;
+        padding: 0;
+    }
+    #calendar_header {
+        font-size: 3rem;
+    }
+    .determination_button {
+        width: 30vh;
+        height: 10vh;
+        border-radius: 50px;
+        left: 60%;
+    }
+    .determination_button_text {
+       font-size: 2rem;
+    }
+    td {
+        font-size: 2rem;
+    }
+    .loading_wrapper {
+        width: 100%;
+        height: 100%;
+    }
+    .loader {
+        margin-top: 40vh;
+    }
+    .learning_time_li>time {
+        font-size: 3rem;
+    }
+}
