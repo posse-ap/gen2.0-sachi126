@@ -1,0 +1,259 @@
+body {
+    width: 650px;
+    margin: 0 auto;
+  }
+  
+  @media screen and (max-width: 660px) {
+    body {
+      width: 90%;
+    }
+  
+    img {
+      width: 100%;
+    }
+  }
+  
+  .header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    white-space: nowrap;
+    background: white;
+    color: white;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    border-bottom: 1px solid #ebebeb;
+    box-shadow: 0 3px 2px -2px rgb(0 0 0/13%);
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+    display: block;
+  }
+  
+  .header_container {
+    display: flex;
+    width: 650px;
+  }
+  
+  .header_title {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .header_kuizy_logo {
+    color: #25abd8;
+    font-weight: 800;
+    font-size: 24px;
+    margin: 0 40% 0 0;
+  }
+  
+  .header_menu {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .header_kuizy_creation {
+    font-size: 12px;
+    color: white;
+    background-color: #f49000;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 3px 5px 5px;
+  }
+  
+  .header_kuizy_search {
+    font-size: 12px;
+    color: white;
+    background-color: #031831;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 3px 5px 5px;
+  }
+  
+  .header_search_icon {
+    width: 12px;
+  }
+  
+  /* ====================menubar=========================== */
+  .menubar {
+    color: black;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 52px;
+    margin-top: 40px;
+    white-space: nowrap;
+    z-index: 9999;
+  }
+  
+  .menubar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .menubar > ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu_list > a {
+    display: block;
+    height: 100%;
+  }
+  
+  .menu_list {
+    border: solid 1px #efefef;
+    width: 25%;
+  }
+  
+  i {
+    width: 20px;
+  }
+  
+  /* ===============LOOP使う部分======================= */
+  div#question {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  div.section {
+    width: 100%;
+    margin: 30px auto;
+  }
+  
+  h1 {
+    font-size: large;
+  }
+  
+  h2 {
+    font-size: 17px;
+    position: relative;
+  }
+  
+  h2::after {
+    content: "";
+    display: block;
+    margin-top: 10px;
+    width: 18%;
+    height: 2px;
+    background-color: #00ab36;
+    position: relative;
+  }
+  
+  /* 選択肢 */
+  ul {
+    list-style: none;
+  }
+  
+  .before_click {
+    display: block;
+    list-style-type: none;
+    width: 95%;
+    border: 1px solid #ebebeb;
+    margin: 10px 0px;
+    padding: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 2px -2px rgb(0 0 0/13%);
+  }
+  
+  .correct_after_clicked {
+    display: block;
+    list-style-type: none;
+    width: 95%;
+    border: 1px solid #ebebeb;
+    margin: 10px 0px;
+    padding: 13px;
+    font-weight: 600;
+    box-shadow: 0 3px 2px -2px rgb(0 0 0/13%);
+    background-color: #287dff;
+    color: white;
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  .wrong_after_clicked {
+    display: block;
+    list-style-type: none;
+    width: 95%;
+    border: 1px solid #ebebeb;
+    margin: 10px 0px;
+    padding: 13px;
+    font-weight: 600;
+    box-shadow: 0 3px 2px -2px rgb(0 0 0/13%);
+    background-color: #ff5128;
+    color: white;
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  .after_click_other {
+    display: block;
+    list-style-type: none;
+    width: 95%;
+    border: 1px solid #ebebeb;
+    margin: 10px 0px;
+    padding: 13px;
+    font-weight: 600;
+    cursor: default;
+    box-shadow: 0 3px 2px -2px rgb(0 0 0/13%);
+    pointer-events: none;
+  }
+  
+  .invisible {
+    display: none;
+  }
+  
+  /* 解答部分 */
+  div.result {
+    display: block;
+    width: 95%;
+    padding: 13px;
+    background-color: #f5f5f5;
+  }
+  
+  .description1_visible {
+    background-color: #f5f5f5;
+    line-height: 20px;
+    font-weight: 600;
+    padding: 3px;
+    margin: 0 0 10px 0;
+    border-bottom: 3px solid #287dff;
+    font-size: 100%;
+    display: inline-block;
+  }
+  
+  .description2_visible {
+    background-color: #f5f5f5;
+    line-height: 20px;
+    font-weight: 600;
+    padding: 3px;
+    margin: 0 0 10px 0;
+    border-bottom: 3px solid #ff5128;
+    font-size: 100%;
+    display: inline-block;
+  }
+  
+  .description3_visible {
+    margin: 0;
+    font-size: 100%;
+    padding: 0;
+    display: block;
+    background-color: #f5f5f5;
+  }
