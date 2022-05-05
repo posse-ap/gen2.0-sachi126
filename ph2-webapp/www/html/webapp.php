@@ -2,17 +2,20 @@
 // phpinfo();
 require('dbconnect.php');
 
+
 $db = new PDO($dsn, $user, $password);
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+
+//総合学習時間
 $total_stmt = $db->query("SELECT SUM(study_time) FROM records");
 $total = $total_stmt->fetch() ?: 0;
 
-
+//月の学習時間
 $month_stmt = $db->query("SELECT SUM(study_time) FROM records WHERE DATE_FORMAT(study_date, '%M/%Y') = DATE_FORMAT(now(), '%M/%Y')");
 $month = $month_stmt->fetch() ?: 0;
 
-
+//今日の学習時間
 $today_stmt = $db->query("SELECT study_time FROM records WHERE study_date = CURDATE()");
 $today = $today_stmt->fetch() ?: 0;
 echo $today['study_time'];
@@ -66,11 +69,9 @@ echo $today['study_time'];
                 <div class="header_text">4th week
                 </div>
             </div>
-
-
-
         </div>
     </header>
+
     <button class="header_button" id="header_button">
         <span class="header_button_text">投稿・記録
         </span>
@@ -94,6 +95,8 @@ echo $today['study_time'];
                     <hour>hour</hour>
                 </li>
             </ul>
+
+            <!-- グラフ -->
             <div class="bar_graph_wrapper">
                 <canvas class="bar_graph_style" id="bar-chart" height="215"></canvas>
             </div>
@@ -138,11 +141,7 @@ echo $today['study_time'];
         </div>
     </div>
 
-    <!-- 
-
-    もーだる
-
- -->
+<!-- もーだる -->
     <div class="black_filter" id="black_filter"></div>
     <div class="overlay" id="overlay">
         <div class="overlay_wrapper">
@@ -249,11 +248,8 @@ echo $today['study_time'];
             <span class="overlay_post_record_button_text">投稿・記録
             </span>
         </button>
-        <!-- 
-    
-    loading overlay
-    
-     -->
+        
+<!-- loading overlay-->
         <div class="loading_wrapper" id="loading">
             <i class="fas fa-times loading_close_button" id="close_button"></i>
             <div class="loader"></div>
@@ -287,8 +283,14 @@ echo $today['study_time'];
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script src="ph2-webapp.js"></script>
-    
+    <!-- <script src="./ph2-webapp.js"></script> -->
+    <script src="./ph2-webapp.js"></script>
+    <!-- <php require('chart1.php); ?> -->
+<?php require('chart1.php');?>
+<?php require('chart2.php');?>
+<?php require('chart3.php');?>
+
 </body>
 
 </html>
+
